@@ -43,19 +43,19 @@ public class Authentication extends StepsDefinitionBase {
 
     @Then("Enter First name {string}")
     public void enter_first_name(String FirstName) throws InterruptedException {
-        driver.findElement(By.xpath("//input[@id='regSignUp.firstName']")).sendKeys(FirstName);
+        driver.findElement(By.id("regSignUp.firstName")).sendKeys(FirstName);
         sleep(3000);
     }
 
     @Then("Enter Last name {string}")
     public void enter_last_name(String LastName) throws InterruptedException {
-        driver.findElement(By.xpath("//input[@id='regSignUp.lastName']")).sendKeys(LastName);
+        driver.findElement(By.id("regSignUp.lastName")).sendKeys(LastName);
         sleep(3000);
     }
 
     @Then("Enter Email address {string}")
     public void enter_email_address(String EmailAdress) throws InterruptedException {
-        driver.findElement(By.xpath("//input[@id='regSignUp.email']")).sendKeys(EmailAdress);
+        driver.findElement(By.id("regSignUp.email")).sendKeys(EmailAdress);
         sleep(3000);
     }
 
@@ -76,13 +76,13 @@ public class Authentication extends StepsDefinitionBase {
     //....................LOG IN WITH INVALID PASSWORD............................
     @Then("Enter EmailAddress {string}")
     public void enter_emailaddress(String emailadress) throws InterruptedException {
-        driver.findElement(By.xpath("//input[@id='regSignIn.email']")).sendKeys(emailadress);
+        driver.findElement(By.id("regSignIn.email")).sendKeys(emailadress);
         sleep(3000);
     }
 
     @Then("Enter invalid Password {string}")
     public void enter_invalid_password(String invalidpassword) throws InterruptedException {
-        driver.findElement(By.xpath("//input[@id='regSignIn.password']")).sendKeys(invalidpassword);
+        driver.findElement(By.id("regSignIn.password")).sendKeys(invalidpassword);
         sleep(3000);
     }
     @Then("Click Sign In Button")
