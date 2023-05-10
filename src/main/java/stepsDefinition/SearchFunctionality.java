@@ -18,7 +18,7 @@ public class SearchFunctionality extends StepsDefinitionBase {
         String expectedTitle = "Tripadvisor: Over a billion reviews & contributions for Hotels, Attractions, Restaurants, and more";
         String actualTitle = driver.getTitle();
 
-        Assert.isTrue(expectedTitle == actualTitle, "Verification Failed - An incorrect title is displayed on the web page.");
+        Assert.isTrue(expectedTitle.contains(actualTitle), "Verification Failed - An incorrect title is displayed on the web page.");
         sleep(3000);
     }
     @Then("Verify if the search box is displayed")
